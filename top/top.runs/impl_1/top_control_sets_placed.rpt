@@ -1,0 +1,85 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sat Jan 09 13:36:41 2021
+| Host         : LAPTOP-LJDLC4RH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    32 |
+| Unused register locations in slices containing registers |   141 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              55 |           27 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              34 |           10 |
+| Yes          | No                    | No                     |              49 |           17 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             185 |           58 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------+----------------------------------+-----------------------------------+------------------+----------------+
+|    Clock Signal    |           Enable Signal          |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++--------------------+----------------------------------+-----------------------------------+------------------+----------------+
+|  div/inst/clk_out1 |                                  |                                   |                1 |              1 |
+|  div/inst/clk_out2 | bt/bluetooth_out[0]_i_1_n_0      | rst_IBUF                          |                1 |              1 |
+|  div/inst/clk_out2 | bt/bluetooth_out[3]_i_1_n_0      | rst_IBUF                          |                1 |              1 |
+|  div/inst/clk_out2 | bt/bluetooth_out[1]_i_1_n_0      | rst_IBUF                          |                1 |              1 |
+|  div/inst/clk_out2 | bt/bluetooth_out[2]_i_1_n_0      | rst_IBUF                          |                1 |              1 |
+|  div/inst/clk_out4 | dis/E[0]                         | dis/dis_pos[0]_i_1_n_0            |                1 |              1 |
+| ~pclk_IBUF_BUFG    |                                  |                                   |                1 |              1 |
+|  div/inst/clk_out2 |                                  | rst_IBUF                          |                1 |              2 |
+|  pclk_IBUF_BUFG    |                                  |                                   |                1 |              3 |
+|  div/inst/clk_out2 |                                  |                                   |                1 |              4 |
+|  div/inst/clk_out2 | bt/cnt[3]_i_1_n_0                | rst_IBUF                          |                2 |              4 |
+|  div/inst/clk_out3 | cam/sender/stat[3]_i_1_n_0       | rst_IBUF                          |                2 |              4 |
+| ~pclk_IBUF_BUFG    | gp/gpready/wait_time[24]_i_1_n_0 |                                   |                1 |              4 |
+| ~pclk_IBUF_BUFG    | gp/gpready/wait_time[24]_i_1_n_0 | gp/gpready/wait_time[22]_i_1_n_0  |                1 |              4 |
+|  div/inst/clk_out3 | cam/sender/sio_c1_out            |                                   |                2 |              5 |
+| ~pclk_IBUF_BUFG    | gp/gpready/wait_time[24]_i_1_n_0 | gp/gpready/wait_time[23]_i_1_n_0  |                1 |              5 |
+|  div/inst/clk_out3 |                                  |                                   |                3 |              6 |
+|  div/inst/clk_out3 | cam/sender/change_time_0         | cam/sender/change_time[8]_i_1_n_0 |                3 |              8 |
+|  div/inst/clk_out1 |                                  | showw/pos/row_pos_0               |                3 |             11 |
+|  div/inst/clk_out1 | showw/pos/row_pos_0              | showw/pos/row_pos[11]_i_1_n_0     |                4 |             12 |
+|  div/inst/clk_out4 | dis/E[0]                         |                                   |                4 |             13 |
+|  div/inst/clk_out2 | bt/begin_bps_cnt                 | rst_IBUF                          |                4 |             16 |
+|  div/inst/clk_out3 | cam/sender/wait_time[16]_i_1_n_0 | rst_IBUF                          |                6 |             17 |
+|  div/inst/clk_out3 | cam/sender/E[0]                  | rst_IBUF                          |                6 |             19 |
+|  showw/pos/E[0]    |                                  |                                   |                6 |             19 |
+|  pclk_IBUF_BUFG    | gp/gpready/get_ready             | gp/now_addr[18]_i_1_n_0           |                5 |             19 |
+|  pclk_IBUF_BUFG    | gp/gpready/next_addr             | gp/now_addr[18]_i_1_n_0           |                5 |             19 |
+|  div/inst/clk_out4 |                                  |                                   |               14 |             21 |
+|  div/inst/clk_out4 |                                  | dis/cnt                           |                6 |             21 |
+| ~pclk_IBUF_BUFG    | gp/gpready/wait_time[24]_i_1_n_0 | gp/gpready/wait_time[35]_i_1_n_0  |                9 |             23 |
+|  pclk_IBUF_BUFG    | gp/gpready/E[0]                  |                                   |               10 |             27 |
+|  div/inst/clk_out3 | cam/sender/data_temp[31]_i_1_n_0 | rst_IBUF                          |                5 |             30 |
++--------------------+----------------------------------+-----------------------------------+------------------+----------------+
+
+
